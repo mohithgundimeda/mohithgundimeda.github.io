@@ -1,0 +1,272 @@
+@font-face {
+  font-family: 'micross';
+  src: url('/micross.ttf') format('truetype');
+}
+
+.welcomeContainer{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #003399;
+}
+
+.welcomeBox {
+  position: relative;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 75%;
+  background-color: #6487DC;
+  overflow: hidden;
+}
+
+.welcomeBox::before,
+.welcomeBox::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.welcomeBox::before {
+  top: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+   rgba(255, 255, 255, 0.525),
+    transparent
+  );
+}
+
+.welcomeBox::after {
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(178, 114, 66, 0.525),
+    transparent
+  );
+}
+
+.starterImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 20vh;
+}
+
+.cols{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.col1,
+.col2 {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.col1 {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}
+.col2 {
+  /* background-color: lightcoral; */
+  display: flex;
+  justify-content: flex-start;
+}
+.starterWhiteImage {
+  position: relative;
+  width: auto;
+  height: 16vh;
+  margin-right: 1rem;
+}
+
+.starterText {
+    color: white;
+    font-family: 'micross', sans-serif;
+    text-align: right;
+    font-size: 1rem;
+    pointer-events: none;
+    margin-top: 2rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    cursor: url("/harrow.cur"), auto;
+}
+
+.mohith{
+    border: 2px solid white;
+    width: 7rem;
+    height: auto;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+.mohithText{
+    color: white;
+    font-family: 'micross', sans-serif;
+    font-size: clamp(1rem, 0.914rem + 0.429vw, 1.3rem);
+    pointer-events: none;
+}
+
+.infoText{
+    position: absolute;
+    width: max-content;
+    bottom: 5%;
+    right:5%;
+    color: white;
+    font-family: 'micross', sans-serif;
+    font-size: 1rem;
+     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes show {
+    to { visibility: visible; }
+}
+
+@media (max-width: 430px){
+  .starterImage{
+    height: 15vh;
+  }
+  .welcomeBox{
+    height: 65%;
+  }
+  .cols{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .col1,
+  .col2 {
+    width: 100%;
+    height: 50%;
+    }
+    .col1 {
+    justify-content: center;
+    }
+    .col2 {
+      justify-content: center;
+    }
+    .starterWhiteImage{
+      position: absolute;
+      height: 10vh;
+      top:55%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .box {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+    .starterText{
+        position: absolute;
+        width: max-content;
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .infoText{
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 431px) and (max-width: 768px){
+  .starterImage{
+    height: 15vh;
+  }
+  .cols {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .col1,
+  .col2 {
+    width: 100%;
+    height: 50%;
+    }
+  .col1 {
+    justify-content: center;
+  }
+  .col2 {
+    justify-content: center;
+  }
+  .starterWhiteImage {
+    position: absolute;
+    height: 15vh;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0;
+  }
+  .box {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 1rem;
+    }
+    .starterText {
+        position: absolute;
+        width: max-content;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 769px) {
+    .col1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(255, 255, 255, 0.346) 35%,
+        rgba(255, 255, 255, 0.346) 65%,
+        transparent 90%
+    );
+    }
+    .box{
+        align-self: center;
+        margin-left: 1rem;
+        width: clamp(20rem, 8.539rem + 23.845vw, 30rem);
+        height: max-content;
+        background: linear-gradient(to right, #003399 40%, #6487DC 100%);
+    }
+    .starterText {
+      position: relative;
+      margin-right: 1rem;
+      pointer-events: none;
+      }
+
+}
