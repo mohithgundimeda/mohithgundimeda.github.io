@@ -4,7 +4,6 @@ import BootSettingScreen from "./BootSettingScreen";
 import WelcomePage from "./WelcomePage";
 import Desktop from "./Desktop";
 
-
 function DesktopRoute() {
   const navigate = useNavigate();
 
@@ -16,31 +15,20 @@ function DesktopRoute() {
 
   const handleLogout = () => {
     localStorage.setItem("loggedIn", "false");
-    navigate("/welcome");
+    navigate("/welcome", { replace: true });
   };
+
 
   return <Desktop onLogout={handleLogout} />;
 }
 
-function WelcomeRoute() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (localStorage.getItem("loggedIn") === "true") {
-      navigate("/desktop");
-    }
-  }, [navigate]);
-
-  return <WelcomePage />;
-}
-
-
 function App() {
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<BootSettingScreen />} />
-        <Route path="/welcome" element={<WelcomeRoute />} />
+        <Route path="/welcome" element={<WelcomePage />} />
         <Route path="/desktop" element={<DesktopRoute />} />
       </Routes>
     </Router>

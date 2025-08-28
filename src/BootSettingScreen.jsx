@@ -21,7 +21,7 @@ export default function BootSettingScreen() {
       });
 
       const timer = setTimeout(() => {
-      navigate("/welcome");
+      navigate("/welcome", {replace: true});
     }, 6000);
 
       return () => {

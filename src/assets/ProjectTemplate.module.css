@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'tohama';
+    src: url('/tahoma.ttf') format('truetype');
+}
+
+.templateContainer{
+    width:100%;
+    height:100%;
+    padding:1rem;
+    display:'flex';
+    flex-direction:'column';
+    font-family: 'tohama', sans-serif;
+    overflow: auto;
+}
+
+.titleContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 1.rem;
+    text-transform: capitalize;
+}
+
+.stackContainer{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.stackTitle{
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+.stackItems{
+    display: flex;
+    align-self: flex-start;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+.contextContainer{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.contextTitle{
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.contextItems{
+    text-align: left;
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+.objectiveContainer{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.objectiveTitle{
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+.objUl{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+
+
+.takeAwayContainer{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.takeAwayTitle{
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.takeAwadiv{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
+}
+.pathway{
+  text-decoration: none;
+  position: sticky;
+  right: 0;
+  bottom: 0;
+}
+
+
+.buttonStyle{
+    display: flex;
+    justify-self: flex-end;
+    font-size: 0.7rem;
+    font-family: 'tohama', sans-serif;
+    padding: 0.3rem;
+    color: black;
+}
+
+@media(max-width: 770px){
+    .pathway{
+        position:absolute;
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
+

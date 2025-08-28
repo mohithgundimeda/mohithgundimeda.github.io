@@ -1,0 +1,94 @@
+{
+    "projects": [
+        {
+        "id": 1,
+        "title": "project 1",
+        "Stack": "React, js , css",
+        "context": "A personal portfolio website to showcase my projects and skills.",
+        "objective": ["Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio."],
+        "takeAway":["Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience."],
+        "link": "https://myportfolio.com"
+        },
+        {
+        "id": 2,
+        "title": "project 2",
+        "Stack": "Node.js",
+        "context": "An online platform for buying and selling products.",
+        "objective": ["Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application."],
+        "takeAway":["Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management."],
+        "link": "https://myecommerce.com"
+        },
+        {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        },
+        {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective":[ "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        },
+        {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        },
+        {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        },
+       {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        },
+       {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        },
+        {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        },
+        {
+        "id": 3,
+        "title": "project 3",
+        "Stack": "Express.js",
+        "context": "A blogging platform where users can create and share posts.",
+        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
+        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
+        "link": "https://myblogapp.com"
+        }
+    ]
+}

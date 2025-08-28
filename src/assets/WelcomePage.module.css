@@ -85,7 +85,6 @@
   justify-content: center;
 }
 .col2 {
-  /* background-color: lightcoral; */
   display: flex;
   justify-content: flex-start;
 }

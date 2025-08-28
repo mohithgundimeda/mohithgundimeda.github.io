@@ -44,7 +44,7 @@ export default function WelcomePage() {
           <p className={styles.starterText}>To begin, click on the profile</p>
         </div>
         <div className={styles.col2}>
-          <div className={styles.box} onClick={() => { localStorage.setItem('loggedIn', 'true');  navigate('/desktop'); }}>
+          <div className={styles.box} onClick={() => { localStorage.setItem('loggedIn', 'true');  navigate('/desktop', {replace: true}); }}>
             <img
               src="/mohith.jpg"
               alt="user"

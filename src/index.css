@@ -4,5 +4,5 @@
   padding: 0;
 }
 body{
-  cursor: url("/default_arrow.cur"), auto;
+  cursor: url("/default_arrow.cur") 12 12, auto;
 }

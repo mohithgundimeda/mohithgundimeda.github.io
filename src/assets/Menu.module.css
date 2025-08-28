@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'micross';
+  src: url('/micross.ttf') format('truetype');
+}
+
+.startMenu{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.9rem;
+    width: min(26.75rem, 80vw);
+    height: min(33.25rem, 80vh);
+     background: linear-gradient(
+    rgb(24, 104, 206) 0%,
+    rgb(14, 96, 203) 12%,
+    rgb(14, 96, 203) 20%,
+    rgb(17, 100, 207) 32%,
+    rgb(22, 103, 207) 33%,
+    rgb(27, 108, 211) 47%,
+    rgb(30, 112, 217) 54%,
+    rgb(36, 118, 220) 60%,
+    rgb(41, 122, 224) 65%,
+    rgb(52, 130, 227) 77%,
+    rgb(55, 134, 229) 79%,
+    rgb(66, 142, 233) 90%,
+    rgb(71, 145, 235) 100%
+  );
+    z-index: 2;
+    border-radius: 0.4rem 0.2rem 0 0.1rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+.menuItem1 {
+  flex: 1.4;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.2rem;
+  margin-left: 0.5rem;
+  gap: 1.4rem;
+}
+
+.menuItem2 {
+  flex: 9;
+  background: rgb(240, 240, 240);
+  width: 99%;
+  align-self: center;
+  display: flex;
+  position: relative;
+
+}
+
+.menuItem2::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(
+    to right,
+    transparent,
+   rgb(178, 115, 66),
+    transparent
+  );
+}
+
+
+.menuItem3 { flex: 1.1; display: flex; gap: 2rem; justify-content: end;}
+
+.leftGrid {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    gap: 1rem;
+}
+
+.rightGrid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #6486dc4d;
+    border-left: 1px solid #6487DC;
+    gap: 1rem;
+}
+
+.menusection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    border: none;
+    text-align: start;
+    padding: 0.4rem 0.6rem;
+    box-sizing: border-box;
+    cursor: url("/harrow.cur") 8 8, auto;
+}
+
+.rightMenusection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    border: none;
+    text-align: start;
+    padding: 0.4rem 0.6rem;
+    box-sizing: border-box;
+    cursor: url("/harrow.cur") 8 8, auto;
+    background-color: transparent;
+}
+
+.menusection:hover {
+  background: #6487DC;
+  color: white;
+  .leftMenuDesc{
+    color: white;
+  }
+  .rightMenuEntry{
+    color: white;
+  }
+}
+
+.rightMenusection:hover {
+  background: #6487DC;
+  color: white;
+  .rightMenuEntry{
+    color: white;
+  }
+}
+
+.leftMenuIcons {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.6rem;
+  object-fit: contain;
+}
+
+.menuItem > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+.leftMenuEntry {
+  font-family: 'micross';
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.2;
+}
+.leftMenuDesc {
+    font-family: 'micross';
+  font-size: 0.72rem;
+  color: grey;
+  margin: 0;
+  line-height: 1.1;
+}
+.rightMenuEntry {
+    font-family: 'micross';
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.2;
+  color: #003399;
+}
+
+.profileImage {
+  width: 4rem;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 0.2rem;
+}
+.username {
+  font-family: 'micross', sans-serif;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.logOffContainer{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem;
+
+  &:hover{
+    background-color: #003399;
+  }
+  cursor: url("/harrow.cur") 8 8, auto;
+}
+.logOffIcon {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+}
+.logOffText {
+  font-family: 'micross';
+  font-size: 0.85rem;
+  color: white;
+}
+.shutdownContainer{
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  margin-right: 0.5rem;
+  &:hover{
+    background-color: #003399;
+  }
+  cursor: url("/harrow.cur") 8 8, auto;
+}
+.shutdownIcon {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+}
+.shutdownText {
+  font-family: 'micross';
+  font-size: 0.85rem;
+  color: white;
+}
+
+

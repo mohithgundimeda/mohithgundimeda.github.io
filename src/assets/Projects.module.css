@@ -1,0 +1,475 @@
+@font-face {
+    font-family: 'tohama';
+    src: url('/tahoma.ttf') format('truetype');
+}
+
+.projectsContainer {
+    position: absolute;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: linear-gradient(
+    rgb(24, 104, 206) 0%,
+    rgb(14, 96, 203) 12%,
+    rgb(14, 96, 203) 20%,
+    rgb(17, 100, 207) 32%,
+    rgb(22, 103, 207) 33%,
+    rgb(27, 108, 211) 47%,
+    rgb(30, 112, 217) 54%,
+    rgb(36, 118, 220) 60%,
+    rgb(41, 122, 224) 65%,
+    rgb(52, 130, 227) 77%,
+    rgb(55, 134, 229) 79%,
+    rgb(66, 142, 233) 90%,
+    rgb(71, 145, 235) 100%
+  );
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectsHeader {
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.frameIdentity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.frameOptions {
+    display: flex;
+    align-items: center;
+}
+.option{
+     width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    cursor: url("/harrow.cur") 8 8, auto;
+}
+.frameIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+
+.frameText {
+    font-family: 'tohama', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin: 0;
+}
+
+.filesBar {
+  background-color: #EFEBD8;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.3rem;
+  height: 1.3rem;
+  overflow: hidden;
+}
+
+.fileItems {
+  display: flex;
+  gap: 0.3rem;
+  font-family: 'tohama', sans-serif;
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+
+.fileItem{
+    max-height: 100%;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgb(24, 104, 206);
+        color: white;
+    }
+}
+
+.fileItems p {
+  margin: 0;
+  pointer-events: none;
+}
+
+.iconContainer{
+    background-color: white;
+    height: 100%;
+    width: 42px;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+.icon{
+    width: 1.3rem;
+    height: 1.3rem;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    object-fit: contain;
+}
+
+.backIcon{
+    width: 1.3rem;
+    height: 1.3rem;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    object-fit: contain;
+    cursor: url('/harrow.cur') 8 8, auto;
+}
+
+
+
+
+
+.locationBar{
+  background-color: #EFEBD8;
+  display: flex;;
+  align-self: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.3rem;
+  height: 2.4rem;
+  gap: 0.5rem;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+.locationControls1 {
+  display: flex;
+  height: 70%;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0 0.2rem;
+
+}
+
+.locationControls2 {
+  display: flex;
+  height: 70%;
+  align-items: center;
+  padding: 0 0.2rem;
+  border-left: 1px solid #ccc;
+  padding-left: 0.3rem;
+
+}
+
+.locationControls3 {
+  display: flex;
+  height: 70%;
+  align-items: center;
+  padding: 0 0.2rem;
+  border-left: 1px solid #ccc;
+  padding-left: 0.3rem;
+
+}
+
+.locationfeature{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: 'tohama', sans-serif;
+    font-weight: 100;
+    font-size: 0.75rem;
+    height: 100%;
+    width: 100%;
+    padding: 0.2rem;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+.locationfeature p{
+    pointer-events: none;
+}
+.smallarrow::after {
+  content: "▼";
+  font-size: 0.55rem;
+  margin-left: 0.2rem;
+}
+.locationfeatureHover{
+    &:hover{
+        border: 1px solid #ccc;
+    }
+}
+
+
+
+
+.addressBar {
+  background-color: #EFEBD8;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  font-size: 0.65rem;
+  height: 1rem;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+.barName{
+    font-family: 'tohama', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    height: 100%;
+    flex: 1;
+    padding: 0.2rem;
+    color: grey;
+    border-bottom: 1px solid #ccc;
+
+}
+.typeArea{
+    font-family: 'tohama', sans-serif;
+    text-align: start;
+    font-weight: 100;
+    height: 100%;
+    flex: 8;
+    background-color: white;
+    border: 1px solid #6487DC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.3rem;
+}
+.typeAreaLeft{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.typeAreaRight{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    &:hover{
+        filter:brightness(1.1)
+    }
+}
+.smallericon{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.typeArea p{
+    margin: 0;
+    pointer-events: none;
+}
+.goArea{
+    font-family: 'tohama', sans-serif;
+    text-align: center;
+    font-weight: 100;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.3rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.contentContainer {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.leftContainer {
+    width:190px;
+    flex-shrink: 0;
+    height: 100%;
+    background: linear-gradient(
+    to bottom,
+    #7996de 0%,
+    #5f7ed2 35%,
+    #4569c8 70%,
+    #2f60c2 100%
+    );
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    overflow: hidden;
+}
+
+.box {
+    background-color: #84a4e8;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2rem 0.2rem 0 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-family: 'tohama', sans-serif;
+    font-weight: 600;
+    font-size: 0.60rem;
+    color:#2f60c2;
+   background: linear-gradient(
+                to right,
+                #ffffff 0%,
+                #ffffff 40%,
+                #d7e3f4 65%,
+                #b9cdee 80%,
+                #84a4e8 100%
+                );
+    display: flex;
+    width: 100%;
+    height: 1.1rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+    border-radius: 0.2rem 0.2rem 0 0;
+
+}
+
+.heading p:hover{
+    color: #1f3f99;
+}
+
+.list{
+    list-style: none;
+    margin: 0;
+    margin-top: 0.3rem;
+    width: 100%;
+    height: auto;
+    color: #2f60c2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: 'tohama', sans-serif;
+    font-weight: 100;
+    font-size: 0.6rem;
+}
+.listItem p:hover{
+    color: #1f3f99;
+    text-decoration: underline;
+}
+.leftContainerIcon{
+    width:1rem;
+    height:1rem;
+    object-fit: contain;
+}
+
+.rightContainer {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+
+
+
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 1.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.gridItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60px;
+  min-height: 50px;
+  width: auto; 
+  box-sizing: border-box;
+  cursor: url('/harrow.cur') 8 8, auto;
+  overflow: hidden;
+}
+
+
+.gridItemImage {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-right: 0.2rem;
+}
+
+.gridItemTitle {
+  flex: 1;
+  font-family: 'tohama', sans-serif;
+  font-size: 0.75rem;
+  color: #333;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+.resizerLeft,
+.resizerRight {
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  z-index: 999;
+  background: transparent;
+}
+
+.resizerLeft {
+  left: -6px;
+  cursor: ew-resize;
+}
+
+.resizerRight {
+  right: -6px;
+  cursor: ew-resize;
+}
+
+.resizerBottom {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 12px;
+  z-index: 999;
+  background: transparent;
+  cursor: ns-resize;
+}
+
+.resizing {
+  user-select: none;
+}
+.footer{
+    height:0.25rem;
+}
