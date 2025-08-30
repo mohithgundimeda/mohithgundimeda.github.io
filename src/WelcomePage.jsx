@@ -8,6 +8,20 @@ export default function WelcomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const imagesToPreload = [
+      "/starter_black.png",
+      "/starter.png",
+      "/mohith.jpg"
+    ];
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+
+  useEffect(() => {
     const tl = gsap.timeline();
 
     tl.to("#starterBlackId", {
@@ -44,7 +58,7 @@ export default function WelcomePage() {
           <p className={styles.starterText}>To begin, click on the profile</p>
         </div>
         <div className={styles.col2}>
-          <div className={styles.box} onClick={() => { localStorage.setItem('loggedIn', 'true');  navigate('/desktop', {replace: true}); }}>
+          <div className={styles.box} onClick={() => { sessionStorage.setItem("playStartupSound", "true"); localStorage.setItem('loggedIn', 'true');  navigate('/desktop', {replace: true}); }}>
             <img
               src="/mohith.jpg"
               alt="user"

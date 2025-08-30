@@ -5,6 +5,22 @@ import gsap from "gsap";
 
 export default function BootSettingScreen() {
 
+  useEffect(() => {
+  const imagesToPreload = [
+    "/starter_black.png",
+    "/starter.png",
+    "/mohith.jpg"
+  ];
+  imagesToPreload.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  const startupSound = new Audio("/Windows XP Startup.wav");
+  startupSound.preload = "auto";
+}, []);
+
+
   const navigate = useNavigate();
 
   const squares = Array.from({ length: 13 }, (_, index) => (

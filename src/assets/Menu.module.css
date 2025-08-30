@@ -24,7 +24,7 @@
     rgb(66, 142, 233) 90%,
     rgb(71, 145, 235) 100%
   );
-    z-index: 2;
+    z-index: 100;
     border-radius: 0.4rem 0.2rem 0 0.1rem;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;

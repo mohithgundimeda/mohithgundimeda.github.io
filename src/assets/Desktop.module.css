@@ -17,6 +17,36 @@
   z-index: -1;
 }
 
+.shortcuts {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.shortcuts div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 4.5rem;
+  cursor: url('/harrow.cur') 8 8, auto;
+  text-align: center;
+  color: white;
+  font-family: 'tohama', sans-serif;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.shortcuts img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  margin-bottom: 0.3rem;
+}
+
 .taskbar {
   position: absolute;
   bottom: 0;
@@ -55,6 +85,7 @@
   background-image: url('/sidebar.png');
   width: 7.5rem;
   height:1.9rem; 
+  font-family: 'tohama', sans-serif;
 }
 .timeText{
   color: white;
@@ -77,6 +108,7 @@
   justify-content: flex-start;
   padding-left: 0.5rem;
   height: 1.7rem;
+  gap:0.5rem
 }
 
 .miniTab {
@@ -139,7 +171,7 @@
     object-fit: contain;
   }
   .miniTab p{
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -156,4 +188,23 @@
     .miniTab p{
       font-size: 0.7rem;
     }
+}
+
+@media (max-width: 768px) {
+  .minimizationContainer {
+    flex: 1;
+    display: flex;
+    overflow-x: auto; 
+    white-space: nowrap;
+    gap: 0.3rem;
+    scrollbar-width: none;
+  }
+
+  .minimizationContainer::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .miniTab {
+    flex: 0 0 auto;
+  }
 }

@@ -23,9 +23,10 @@
     rgb(66, 142, 233) 90%,
     rgb(71, 145, 235) 100%
   );
-    z-index: 2;
+    z-index: 10;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .projectsHeader {
@@ -38,6 +39,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 0.5rem;
+    flex-shrink: 0;
 }
 
 .frameIdentity {
@@ -71,12 +73,13 @@
 .filesBar {
   background-color: #EFEBD8;
   display: flex;
-  align-self: center;
+  justify-self: center;
   align-items: center;
   justify-content: space-between;
   padding-left: 0.3rem;
   height: 1.3rem;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .fileItems {
@@ -87,18 +90,19 @@
   font-size: 0.75rem;
 }
 
-.fileItem{
-    max-height: 100%;
-    width: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.fileItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.4rem; 
+  height: 100%;
 
-    &:hover {
-        background-color: rgb(24, 104, 206);
-        color: white;
-    }
+  &:hover {
+    background-color: rgb(24, 104, 206);
+    color: white;
+  }
 }
+
 
 .fileItems p {
   margin: 0;
@@ -138,7 +142,7 @@
 .locationBar{
   background-color: #EFEBD8;
   display: flex;;
-  align-self: center;
+  justify-self: center;
   align-items: center;
   justify-content: flex-start;
   padding-left: 0.3rem;
@@ -146,6 +150,7 @@
   gap: 0.5rem;
   border-top: 1px solid #ccc;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .locationControls1 {
   display: flex;
@@ -163,7 +168,7 @@
   padding: 0 0.2rem;
   border-left: 1px solid #ccc;
   padding-left: 0.3rem;
-
+  gap: 0.1rem;
 }
 
 .locationControls3 {
@@ -189,6 +194,8 @@
     border: 1px solid transparent;
     box-sizing: border-box;
 }
+
+
 .locationfeature p{
     pointer-events: none;
 }
@@ -203,7 +210,14 @@
     }
 }
 
-
+.contactIcon{
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    object-fit: contain;
+}
 
 
 .addressBar {
@@ -216,7 +230,10 @@
   height: 1rem;
   border-top: 1px solid #ccc;
   overflow: hidden;
+  flex-shrink: 0;
 }
+
+
 .barName{
     font-family: 'tohama', sans-serif;
     text-align: center;
@@ -278,13 +295,21 @@
     border-bottom: 1px solid #ccc;
 }
 
+
+
+
+
+
+
 .contentContainer {
     display: flex;
     justify-self: center;
-    align-self: center;
-    flex: 1;
     min-height: 0;
+    height: calc(100% - 6.95rem);
     overflow: hidden;
+    /* width: 99%; */
+    box-sizing: border-box;
+    background-color: #003399;
 }
 
 .leftContainer {
@@ -383,10 +408,8 @@
     flex: 1;
     height: 100%;
     background-color: #ffffff;
+    overflow: auto;
 }
-
-
-
 
 .projectsGrid {
   display: flex;
@@ -432,10 +455,6 @@
 
 
 
-
-
-
-
 .resizerLeft,
 .resizerRight {
   position: absolute;
@@ -470,6 +489,382 @@
 .resizing {
   user-select: none;
 }
-.footer{
-    height:0.25rem;
+
+
+/* My Pictures CSS */
+
+.MyPicturesRightContainer {
+  flex: 1;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.frame {
+  width: 100%;
+  flex: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #84a4e828;
+  min-height: 0;
+  padding: 1rem;
+  box-sizing: border-box; 
+  max-height: 100%;
+}
+
+.pictureGrid {
+  width: 70%;
+  height: 80%;
+  border: 1px solid black;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.controlsContainer {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.verticalChanges {
+  border-right: 1.5px solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+
+.flipping {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-left: 1rem;
+}
+
+.svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: url('/harrow.cur') 8 8, auto;
+  transition: transform 0.2s;
+}
+
+.svg:hover {
+  transform: scale(1.2);
+}
+
+.slide {
+  width: 100%;
+  overflow-x: auto;
+  flex: 25%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.ImageContainer {
+  flex: 0 0 auto;
+  max-height: 4rem;
+  height: 100%;
+  min-width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+.highlight{
+  border: 3px solid #003399;
+  color: #003399;
+
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: url('/harrow.cur') 8 8, auto;
+}
+
+.imageName {
+  margin: 0;
+  font-size: 0.6rem;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Notepad*/
+
+.NotepadContentContainer{
+  display: flex;
+  justify-self: center;
+  min-height: 0;
+  height: calc(100% - 3.4rem);
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: 'tohama', sans-serif;
+}
+
+/*diet*/
+
+.DietContentContainer{
+  display: flex;
+  justify-self: center;
+  min-height: 0;
+  height: calc(100% - 6.9rem);
+  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: 'tohama', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+.point{
+  font-size: 0.8rem;
+
+}
+
+.graph{
+  object-fit: contain;
+}
+
+.comandContainer {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  height: calc(100% - 2.07rem);
+  box-sizing: border-box;
+  background-color: #000000;
+  color: white;
+  font-family: 'tohama', sans-serif;
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+/*Blog*/
+
+.blogContainer{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  overflow-y: auto;
+  background-color: white;
+  height: calc(100% - 6.9rem);
+  padding: 0.5rem;
+  font-family: 'tohama', sans-serif;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+.blogItemContainer{
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  cursor: url('/harrow.cur') 8 8,auto;
+}
+
+.blogItemContainer:hover {
+  background-color: #4569c8;
+}
+
+.blogItemContainer:hover .blogTitle {
+  color: white;
+  text-decoration: underline;
+}
+
+.blogImage{
+  width:6rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.titleAndTag{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.tagList{
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag{
+  width: max-content;
+  height: max-content;
+  background-color: #ccc;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.6rem;
+}
+
+.abstractContainer {
+  max-width: 80ch;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 0.8rem;
+}
+.blogHeading{
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
+.aLink{
+  text-decoration: none;
+  display: flex;
+  justify-self: center;
+  margin-top: 2rem;
+  font-size: 0.6rem;
+
+}
+
+.readbutton{
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  cursor: url('/harrow.cur') 8 8,auto;
+}
+
+/* contact*/
+
+.contactLocationBar {
+  background-color: #EFEBD8;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding: 0 0.3rem;
+  height: 2.8rem;
+  gap: 0.3rem;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-size: 0.65rem;
+}
+
+.contactLocationControls1,
+.contactLocationControls2,
+.contactLocationControls3 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0.3rem;
+  padding: 0 0.3rem;
+  border-left: 1px solid #ccc;
+}
+.contactLocationControls1 {
+  border-left: none;
+}
+
+.contactLocationfeature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 100%;
+  padding: 0.2rem 0;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.contactLocationfeature:hover {
+  border: 1px solid #ccc;
+}
+
+.contactIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: contain;
+}
+
+
+.contactAddressBar {
+  background-color: #EFEBD8;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  height: 6rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.75rem;
+  padding: 0.4rem;
+  gap: 0.3rem 0.6rem;
+}
+
+.labelCell {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.inputCell {
+  display: flex;
+  align-items: center;
+}
+
+.inputCell input {
+  width: 100%;
+  border: 1px solid #1f3f99;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.2rem;
+  outline: none;
+}
+
+.bookIcon {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+}
+.contactContentContainer{
+    display: flex;
+    justify-self: center;
+    min-height: 0;
+    height: calc(100% - 11.9rem);
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+}
+.messageBox {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: 1px solid #7F9DB9;
+  background-color: #ffffff;
+  font-size: 0.8rem;
+  font-family: 'tohama', sans-serif;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.messageBox:focus {
+  border: 1px solid #1f3f99; 
 }

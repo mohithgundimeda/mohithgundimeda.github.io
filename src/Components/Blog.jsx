@@ -1,15 +1,14 @@
 import React, {useRef, useState, useEffect}from "react";
 import styles from "../assets/Projects.module.css";
 import data from "../assets/projects.json";
-import ProjectTemplate from "./ProjectTemplate";
 import {useIsMobile} from "./useIsMobile";
 
 
 
-export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, minimized}) {
+export default function Blog({closeWindow, minimizeWindow,zIndex, onFocus, minimized}) {
     const isMobile = useIsMobile();
 
-    const DEFAULT_POSITION = isMobile ? { top: 0, left: 0 } : { top: 32, left: 380 };
+    const DEFAULT_POSITION = isMobile ? { top: 0, left: 0 } : { top: 40, left: 600 };
     const DEFAULT_SIZE = isMobile 
     ? { width: window.innerWidth, height: window.innerHeight } 
     : { width: 640, height: 480 };
@@ -22,13 +21,11 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
     const resizingRef = useRef({ active: false, dir: null, startX: 0, startY: 0, startWidth: 0, startHeight: 0 });
 
     const [maximized, setMaximized] = useState(false);
-    const [selectedProjectId, setSelectedProjectId] = useState(false);
-    const [projectInfo, setProjectInfo] = useState(null);
-    const [url, setUrl] = useState('Projects');
+    const [selectedBlogId, setSelectedBlogId] = useState(null);
 
     const [position, setPosition] = useState(DEFAULT_POSITION);
 
-    const MIN_WIDTH = 400;
+    const MIN_WIDTH = 500;
     const MIN_HEIGHT = 420;
 
     useEffect(() => {
@@ -63,7 +60,6 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
             resizingRef.current.dir = null;
             window.removeEventListener("mousemove", onMouseMove);
             window.removeEventListener("mouseup", onMouseUp);
-            // optional: smooth transition off after resize
             }
 
             if (resizingRef.current.active) {
@@ -200,19 +196,41 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
         height: '1rem'
     } : {}
 
-    const handleProjectClick = (id) => {
-        setSelectedProjectId(true);
-        setProjectInfo(<ProjectTemplate projects={data.projects} id={id} />);
-    };
-
-    const gridItems = data.projects.map((item, index) => (
-        <div key={index} className={styles.gridItem} onClick={() => {handleProjectClick(item.id); setUrl(`Projects/${item.title}`)}}>
-            <img src='/Folder Opened.png' alt={item.title} className={styles.gridItemImage} />
-            <p className={styles.gridItemTitle}>{item.title}</p>
-        </div>
-    ));
-
     const screenWidthEdit = {width : maximized ? '100%' : '99%'}
+    const selectedBlog = selectedBlogId
+    ? data.blogs.find(blg => blg.id === selectedBlogId)
+    : null;
+
+    const handleBlogClick = (id) =>{
+        setSelectedBlogId(id);
+    }
+
+    const blogItems = data.blogs.map((item, index) => {
+        const imageName = item.image.includes("/")
+            ? item.image.split("/").pop()
+            : item.image;
+
+        return (
+            <div key={index} className={styles.blogItemContainer} onClick={()=>handleBlogClick(item.id)}>
+            <img
+                src={item.image}
+                alt={imageName}
+                className={styles.blogImage}
+            />
+            <div className={styles.titleAndTag}>
+                <p className={styles.blogTitle}>{item.title}</p>
+                <div className={styles.tagList}>
+                {item.tags.map((tag, i) => (
+                    <div key={i} className={styles.tag}>
+                    {tag}
+                    </div>
+                ))}
+                </div>
+            </div>
+            </div>
+        );
+        });
+
 
 
   return (
@@ -220,8 +238,8 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
 
             <div className={styles.projectsHeader}  onMouseDown={startMove}>
                 <div className={styles.frameIdentity}>
-                    <img src="/Briefcase.png" alt="projects" className={styles.frameIcon} />
-                    <p className={styles.frameText}>Projects</p>
+                    <img src="/Generic Text Document.png" alt="blogs" className={styles.frameIcon} />
+                    <p className={styles.frameText}>Blog Posts</p>
                 </div>
                 <div className={styles.frameOptions}>
                     <img src="/Minimize.png" alt="minimize" className={styles.option} onClick={minimizeWindow}/>
@@ -248,7 +266,7 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
 
             <div className={styles.locationBar} style={screenWidthEdit}>
                 <div className={styles.locationControls1}>
-                    <div className={styles.locationfeature} > <img src={selectedProjectId ? "/Back.png" : "/Back Grey.png"} alt="go back" style={{cursor:"url('/harrow.cur'),auto}"}} className={styles.backIcon} onClick={() =>{selectedProjectId && setSelectedProjectId(false); setUrl('Projects')}}/> <p>Back</p> <p className={styles.smallarrow}/></div>
+                    <div className={styles.locationfeature} > <img src={selectedBlogId ? "/Back.png" : "/Back Grey.png"} alt="go back" style={{cursor:"url('/harrow.cur'),auto}"}} className={styles.backIcon} onClick={() =>{selectedBlogId && setSelectedBlogId(false);}}/> <p>Back</p> <p className={styles.smallarrow}/></div>
                     <div className={styles.locationfeature}> <img src="/Forward.png" alt="go forward" className={styles.icon}/> <p className={styles.smallarrow}/></div>
                     <div className={`${styles.locationfeature} ${styles.locationfeatureHover}`}> <img src="/Up.png" alt="go up" className={styles.icon}/></div>
                 </div>
@@ -263,63 +281,29 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
 
             <div className={styles.addressBar} style={addressBarStyle}>
                 <div className={styles.barName}><p>Address</p></div>
-                <div className={styles.typeArea}><div className={styles.typeAreaLeft}><img src="/Detail View.png" alt="detail view" className={styles.smallericon} style={smallerIconReplica}/><p>{url}</p></div><div className={styles.typeAreaRight}><img src='/down.png' alt="down" className={styles.smallericon}/></div></div>
+                <div className={styles.typeArea}><div className={styles.typeAreaLeft}><img src="/Detail View.png" alt="detail view" className={styles.smallericon} style={smallerIconReplica}/><p>Blog Posts</p></div><div className={styles.typeAreaRight}><img src='/down.png' alt="down" className={styles.smallericon}/></div></div>
                 <div className={styles.goArea}><img src="/Go.png" alt="go" className={styles.smallericon} style={smallerIconReplica}/><p>Go</p></div>
             </div>
 
-            <div className={styles.contentContainer} style={screenWidthEdit}>
-                {!isMobile && 
-                <div className={styles.leftContainer}>
-                   
-                    <div className={styles.box}>
-                        <div className={styles.heading}><p>System Tasks</p></div>
-                        <ul className={styles.list}>
-                            <li className={styles.listItem}><img src='/explorer properties.png' alt='explorer' className={styles.leftContainerIcon}/><p>View system information</p></li>
-                            <li className={styles.listItem}><img src='/Programs.png' alt='programs' className={styles.leftContainerIcon}/><p>Add or remove programs</p></li>
-                            <li className={styles.listItem}><img src='/Control Panel.png' alt='control panel' className={styles.leftContainerIcon}/><p>Change a settings</p></li>
-                        </ul>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.heading}><p>Other</p></div>
-                        <ul className={styles.list}>
-                            <li className={styles.listItem}><img src='/My Network Places.png' alt='network' className={styles.leftContainerIcon}/><p>My network places</p></li>
-                            <li className={styles.listItem}><img src='/My Documents.png' alt='documents' className={styles.leftContainerIcon}/><p>My documents</p></li>
-                            <li className={styles.listItem}><img src='/Folder Closed.png' alt='folder' className={styles.leftContainerIcon}/><p>Shared documents</p></li>
-                            <li className={styles.listItem}><img src='/Control Panel.png' alt='control panel' className={styles.leftContainerIcon}/><p>Control panel</p></li>
-                        </ul>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.heading}><p>Details</p></div>
-                        <ul className={styles.list}>
-                            <li className={styles.listItem}>
-                                <a 
-                                href="https://github.com/mohithgundimeda?tab=repositories" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center',  cursor: "url('/harrow.cur') 8 8, auto" }}
-                                >
-                                <img src='/github-mark-white.png' alt='github' className={styles.leftContainerIcon}/>
-                                <p style={{marginLeft:'0.3rem'}}>My Github</p>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-
+           <div className={styles.blogContainer} style={screenWidthEdit}>
+            {selectedBlog ? (
+                <div className={styles.abstractContainer}>
+                <p  className={styles.blogHeading}>{selectedBlog.title}</p>
+                <p className={styles.abstractStlye}>{selectedBlog.abstract}</p>
+                <a
+                    href={selectedBlog.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.aLink}
+                >
+                    <button className={styles.readbutton}>Read</button>
+                </a>
                 </div>
-                }
-                <div className={styles.rightContainer}>
-                   {selectedProjectId ? 
-                    projectInfo
-                   : 
-                    <div className={styles.projectsGrid}>
-                        {gridItems}
-                    </div>
-                    }
-                </div>
+            ) : (
+                blogItems
+            )}
             </div>
+
 
             <div
                 className={styles.resizerLeft}

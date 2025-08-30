@@ -8,87 +8,73 @@
         "objective": ["Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio."],
         "takeAway":["Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience."],
         "link": "https://myportfolio.com"
+        }
+    ],
+
+    "blogs":[
+        {
+            "id":1,
+            "title":"At the Core of Every ML Model There Is A Single Estimation Problem",
+            "image":"/blogs/point_estimation.png",
+            "tags":["Point Estimation", "Machine Learning", "Statistics", "Standard Error", "Normal Distribution"],
+            "abstract":"Explores the role of point estimation in statistics and machine learning, showing how sample means approximate population parameters, why bias and standard error matter, and how increasing data size brings estimates closer to the true value.",
+            "link":"https://medium.com/@mohith-g/at-the-core-of-every-ml-model-there-is-a-single-estimation-problem-47c31901bb90"
         },
         {
-        "id": 2,
-        "title": "project 2",
-        "Stack": "Node.js",
-        "context": "An online platform for buying and selling products.",
-        "objective": ["Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application.","Develop a full-stack e-commerce application."],
-        "takeAway":["Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management.","Gained experience with RESTful APIs and database management."],
-        "link": "https://myecommerce.com"
+            "id":2,
+            "title":"Confidence Is The New Truth",
+            "image":"/blogs/CI.png",
+            "tags":["Confidence Intervals", "Statistical Inference", "Bootstrap", "Estimation", "Machine Learning"],
+            "abstract":"Introduces confidence intervals as a way to express uncertainty in estimation, clarifies common misconceptions, and compares three approaches—Normal, Pivotal, and Percentile—showing when each method works best.",
+            "link":"https://medium.com/@mohith-g/confidence-is-the-new-truth-76e9b880ff0a"
         },
         {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
+            "id":3,
+            "title":"Maximum Likelihood Estimation: Finding The Optimal Parameter",
+            "image":"/blogs/MLE.png",
+            "tags":["Machine Learning", "Maximum Likelihood Estimation", "MLE", "Log-Likelihood", "Statistical Inference"],
+            "abstract":"Explains the intuition behind maximum likelihood estimation, why the log-likelihood is used, and how MLE leads to the sample mean in the normal case. Walks through examples, derivations, and shows consistency of the estimator as sample size grows.",
+            "link":"https://medium.com/@mohith-g/maximum-likelihood-estimation-finding-the-optimal-parameter-9cebfbd5aa1d"
         },
         {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective":[ "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts.", "Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
+            "id":4,
+            "title":"A Hands-On Look At Bayesian Inference",
+            "image":"/blogs/bayes.png",
+            "tags":["Statistical Inference","Bayesian Inference", "Bayes Theorem", "Machine Learning", "Prior", "Posterior" ],
+            "abstract":"Introduces Bayesian inference as an alternative to frequentist tools when data is scarce or non-repeatable. Explains Bayes’ theorem with examples, and shows how priors—flat, weak, informative, and robust—interact with likelihood to shape the posterior distribution and handle uncertainty.",
+            "link":"https://medium.com/@mohith-g/a-hands-on-look-at-bayesian-inference-e169d6353ab1"
         },
         {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
+            "id":5,
+            "title":"Linear Regression Explained: From Theory to Real-World Implementation",
+            "image":"/blogs/LinearReg.png",
+            "tags":["Linear Regression", "Ordinary Least Squares", "Log-Likelihood", "Bias-Variance", "Statistical Modeling"],
+            "abstract":"Builds linear regression from first principles, showing how the conditional expectation E[Y|X] motivates least squares. Derives slope and intercept using both OLS and MLE, connects residuals to likelihood, and explains model assumptions like linearity, normal errors, and homoskedasticity. Uses simulations and real-world data to show fit, inference, and limitations.",
+            "link":"https://medium.com/@mohith-g/linear-regression-explained-from-theory-to-real-world-implementation-45b43faed743"
         },
         {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
-        },
-       {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
-        },
-       {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
+            "id":6,
+            "title":"Multiple Linear Regression: How Assumptions, Multicollinearity, and Data Shape Your Model’s Performance",
+            "image":"/blogs/MultiLinearReg.png",
+            "tags":["Multiple Linear Regression", "Multicollinearity", "Heteroskedasticity", "Coefficient Interpretation", "Model Assumptions"],
+            "abstract":"Extends simple linear regression to multiple predictors using matrix notation. Shows how multicollinearity makes coefficients unstable, why low R sqaure and heteroskedasticity limit inference on small datasets, and how log-transforming targets can stabilize variance. Demonstrates with real datasets that larger samples and less correlated predictors lead to more reliable coefficients and better fit.",
+            "link":"https://medium.com/@mohith-g/multiple-linear-regression-how-assumptions-multicollinearity-and-data-shape-your-models-cf2618a81cc4"
         },
         {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
+            "id":7,
+            "title":"Density Function Estimation",
+            "image":"/blogs/histogram.png",
+            "tags":["Density Estimation", "Histogram", "Bias-Variance Tradeoff", "Confidence Bands", "Old Faithful Dataset"],
+            "abstract":"Explores density estimation starting with histograms and the effect of bin width. Shows how the choice of smoothing changes the shape of the estimated distribution and introduces the bias–variance tradeoff. Uses the Old Faithful dataset to illustrate the method and how confidence bands give a sense of uncertainty in the estimate.",
+            "link":"https://medium.com/@mohith-g/density-function-estimation-39383466e969"
         },
         {
-        "id": 3,
-        "title": "project 3",
-        "Stack": "Express.js",
-        "context": "A blogging platform where users can create and share posts.",
-        "objective": ["Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts.","Build a RESTful API for managing blog posts."],
-        "takeAway":["Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB.","Learned about building APIs and working with MongoDB."],
-        "link": "https://myblogapp.com"
+            "id":8,
+            "title":"Moving Past Histograms: Smoothing Out Distributions with KDE",
+            "image":"/blogs/KDE.png",
+            "tags":["Kernel Density Estimation", "Smoothing", "Bandwidth", "Gaussian Kernel", "Epanechnikov Kernel"],
+            "abstract":"Introduces kernel density estimation as a smoother alternative to histograms. Explains how kernels work, why bandwidth controls the balance between noise and oversmoothing, and shows common choices like Gaussian, Epanechnikov, and Uniform kernels. Walks through coding KDE by hand, then compares it to built-in implementations from Statsmodels and Seaborn on the Old Faithful dataset.",
+            "link":"https://medium.com/@mohith-g/moving-past-histograms-smoothing-out-distributions-with-kde-9c5a7700f667"
         }
     ]
 }

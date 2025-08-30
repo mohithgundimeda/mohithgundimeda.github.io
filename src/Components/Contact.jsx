@@ -1,18 +1,16 @@
 import React, {useRef, useState, useEffect}from "react";
 import styles from "../assets/Projects.module.css";
-import data from "../assets/projects.json";
-import ProjectTemplate from "./ProjectTemplate";
 import {useIsMobile} from "./useIsMobile";
 
 
 
-export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, minimized}) {
+export default function Contact({closeWindow, minimizeWindow,zIndex, onFocus, minimized}) {
     const isMobile = useIsMobile();
 
-    const DEFAULT_POSITION = isMobile ? { top: 0, left: 0 } : { top: 32, left: 380 };
+    const DEFAULT_POSITION = isMobile ? { top: 0, left: 0 } : { top: 60, left: 500 };
     const DEFAULT_SIZE = isMobile 
     ? { width: window.innerWidth, height: window.innerHeight } 
-    : { width: 640, height: 480 };
+    : { width: 740, height: 580 };
 
 
     const containerRef = useRef(null);
@@ -22,13 +20,12 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
     const resizingRef = useRef({ active: false, dir: null, startX: 0, startY: 0, startWidth: 0, startHeight: 0 });
 
     const [maximized, setMaximized] = useState(false);
-    const [selectedProjectId, setSelectedProjectId] = useState(false);
-    const [projectInfo, setProjectInfo] = useState(null);
-    const [url, setUrl] = useState('Projects');
 
     const [position, setPosition] = useState(DEFAULT_POSITION);
+    const [from, setFrom] = useState('');
+    const [subject, setSubject] = useState('');
 
-    const MIN_WIDTH = 400;
+    const MIN_WIDTH = 660;
     const MIN_HEIGHT = 420;
 
     useEffect(() => {
@@ -63,7 +60,6 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
             resizingRef.current.dir = null;
             window.removeEventListener("mousemove", onMouseMove);
             window.removeEventListener("mouseup", onMouseUp);
-            // optional: smooth transition off after resize
             }
 
             if (resizingRef.current.active) {
@@ -189,28 +185,6 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
     };
 
 
-    const addressBarStyle= maximized ? {
-        width:'100%',
-        height:'1.5rem',
-        fontSize:'0.8rem'
-    } : {width:'99%'}
-
-    const smallerIconReplica = maximized ? {
-        width: '1rem',
-        height: '1rem'
-    } : {}
-
-    const handleProjectClick = (id) => {
-        setSelectedProjectId(true);
-        setProjectInfo(<ProjectTemplate projects={data.projects} id={id} />);
-    };
-
-    const gridItems = data.projects.map((item, index) => (
-        <div key={index} className={styles.gridItem} onClick={() => {handleProjectClick(item.id); setUrl(`Projects/${item.title}`)}}>
-            <img src='/Folder Opened.png' alt={item.title} className={styles.gridItemImage} />
-            <p className={styles.gridItemTitle}>{item.title}</p>
-        </div>
-    ));
 
     const screenWidthEdit = {width : maximized ? '100%' : '99%'}
 
@@ -220,8 +194,8 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
 
             <div className={styles.projectsHeader}  onMouseDown={startMove}>
                 <div className={styles.frameIdentity}>
-                    <img src="/Briefcase.png" alt="projects" className={styles.frameIcon} />
-                    <p className={styles.frameText}>Projects</p>
+                    <img src="/Email.png" alt="contat" className={styles.frameIcon} />
+                    <p className={styles.frameText}>Contact</p>
                 </div>
                 <div className={styles.frameOptions}>
                     <img src="/Minimize.png" alt="minimize" className={styles.option} onClick={minimizeWindow}/>
@@ -239,86 +213,86 @@ export default function Projects({closeWindow, minimizeWindow,zIndex, onFocus, m
                     <div className={styles.fileItem}><p>File</p></div>
                     <div className={styles.fileItem}><p>Edit</p></div>
                     <div className={styles.fileItem}><p>View</p></div>
+                    <div className={styles.fileItem}><p>Insert</p></div>
+                    <div className={styles.fileItem}><p>Format</p></div>
                     <div className={styles.fileItem}><p>Tools</p></div>
+                    <div className={styles.fileItem}><p>Message</p></div>
+                    <div className={styles.fileItem}><p>Help</p></div>
                 </div>
                 <div className={styles.iconContainer}>
                     <img src="/pngwing1.png" alt="icon" className={styles.icon} />
                 </div>
             </div>
 
-            <div className={styles.locationBar} style={screenWidthEdit}>
-                <div className={styles.locationControls1}>
-                    <div className={styles.locationfeature} > <img src={selectedProjectId ? "/Back.png" : "/Back Grey.png"} alt="go back" style={{cursor:"url('/harrow.cur'),auto}"}} className={styles.backIcon} onClick={() =>{selectedProjectId && setSelectedProjectId(false); setUrl('Projects')}}/> <p>Back</p> <p className={styles.smallarrow}/></div>
-                    <div className={styles.locationfeature}> <img src="/Forward.png" alt="go forward" className={styles.icon}/> <p className={styles.smallarrow}/></div>
-                    <div className={`${styles.locationfeature} ${styles.locationfeatureHover}`}> <img src="/Up.png" alt="go up" className={styles.icon}/></div>
+            <div className={styles.contactLocationBar} style={screenWidthEdit}>
+                <div className={styles.contactLocationControls1}>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/OE Send.png" alt="send" className={styles.contactIcon}/> <p>Send</p></div>
                 </div>
-                <div className={styles.locationControls2}>
-                    <div className={`${styles.locationfeature} ${styles.locationfeatureHover}`}> <img src="/Search.png" alt="search" className={styles.icon} /><p>Search</p></div>
-                    <div className={`${styles.locationfeature} ${styles.locationfeatureHover}`}> <img src="/Folder Opened.png" alt="folder opened" className={styles.icon}/><p>Files</p></div>
+                <div className={styles.contactLocationControls2}>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/Cut.png" alt="cut" className={styles.contactIcon}/><p>Cut</p></div>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/Copy.png" alt="copy" className={styles.contactIcon}/><p>Copy</p></div>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/Paste.png" alt="paste" className={styles.contactIcon} /><p>Paste</p></div>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/Undo.png" alt="undo" className={styles.contactIcon}/><p>Undo</p></div>
                 </div>
-                <div className={styles.locationControls3}>
-                    <div className={`${styles.locationfeature} ${styles.locationfeatureHover}`}> <img src="/Detail View.png" alt="detail view" className={styles.icon} /> <p className={styles.smallarrow}/></div>
+                <div className={styles.contactLocationControls3}>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/check-icon.webp" alt="check" className={styles.contactIcon}/><p>Check</p></div>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/spelling-icon.webp" alt="spelling" className={styles.contactIcon} /><p>Spelling</p></div>
+                </div>
+                <div className={styles.contactLocationControls3}>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/OE Attatch.png" alt="attach" className={styles.contactIcon}/><p>Attach</p></div>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/priority-icon.webp" alt="spelling" className={styles.contactIcon} /><p>Priority</p></div>
+                </div>
+                <div className={styles.contactLocationControls3}>
+                    <div className={`${styles.contactLocationfeature} ${styles.locationfeatureHover}`}> <img src="/OE Sign.png" alt="sign" className={styles.contactIcon}/><p>Sign</p></div>
                 </div>
             </div>
 
-            <div className={styles.addressBar} style={addressBarStyle}>
-                <div className={styles.barName}><p>Address</p></div>
-                <div className={styles.typeArea}><div className={styles.typeAreaLeft}><img src="/Detail View.png" alt="detail view" className={styles.smallericon} style={smallerIconReplica}/><p>{url}</p></div><div className={styles.typeAreaRight}><img src='/down.png' alt="down" className={styles.smallericon}/></div></div>
-                <div className={styles.goArea}><img src="/Go.png" alt="go" className={styles.smallericon} style={smallerIconReplica}/><p>Go</p></div>
+          <div className={styles.contactAddressBar} style={screenWidthEdit}>
+                
+                <div className={styles.labelCell}>
+                    <img src="/mailto-icon.webp" alt="book" className={styles.bookIcon}/>
+                    <p>To:</p>
+                </div>
+                <div className={styles.inputCell}>
+                    <input 
+                    type="text"
+                    value="mohithgundemeda@gmail.com"
+                    style={{pointerEvents:'none'}}
+                    />
+                </div>
+
+                
+                <div className={styles.labelCell}>
+                    <img src="/mailto-icon.webp" alt="book" className={styles.bookIcon}/>
+                    <p>From:</p>
+                </div>
+                <div className={styles.inputCell}>
+                    <input 
+                    type="text"
+                    value={from}
+                    onChange={(e) => setFrom(e.target.value)}
+                    />
+                </div>
+
+                
+                <div className={styles.labelCell}>
+                    <p>Subject:</p>
+                </div>
+                <div className={styles.inputCell}>
+                    <input 
+                    type="text"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    />
+                </div>
             </div>
 
-            <div className={styles.contentContainer} style={screenWidthEdit}>
-                {!isMobile && 
-                <div className={styles.leftContainer}>
-                   
-                    <div className={styles.box}>
-                        <div className={styles.heading}><p>System Tasks</p></div>
-                        <ul className={styles.list}>
-                            <li className={styles.listItem}><img src='/explorer properties.png' alt='explorer' className={styles.leftContainerIcon}/><p>View system information</p></li>
-                            <li className={styles.listItem}><img src='/Programs.png' alt='programs' className={styles.leftContainerIcon}/><p>Add or remove programs</p></li>
-                            <li className={styles.listItem}><img src='/Control Panel.png' alt='control panel' className={styles.leftContainerIcon}/><p>Change a settings</p></li>
-                        </ul>
-                    </div>
 
-                    <div className={styles.box}>
-                        <div className={styles.heading}><p>Other</p></div>
-                        <ul className={styles.list}>
-                            <li className={styles.listItem}><img src='/My Network Places.png' alt='network' className={styles.leftContainerIcon}/><p>My network places</p></li>
-                            <li className={styles.listItem}><img src='/My Documents.png' alt='documents' className={styles.leftContainerIcon}/><p>My documents</p></li>
-                            <li className={styles.listItem}><img src='/Folder Closed.png' alt='folder' className={styles.leftContainerIcon}/><p>Shared documents</p></li>
-                            <li className={styles.listItem}><img src='/Control Panel.png' alt='control panel' className={styles.leftContainerIcon}/><p>Control panel</p></li>
-                        </ul>
-                    </div>
-
-                    <div className={styles.box}>
-                        <div className={styles.heading}><p>Details</p></div>
-                        <ul className={styles.list}>
-                            <li className={styles.listItem}>
-                                <a 
-                                href="https://github.com/mohithgundimeda?tab=repositories" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center',  cursor: "url('/harrow.cur') 8 8, auto" }}
-                                >
-                                <img src='/github-mark-white.png' alt='github' className={styles.leftContainerIcon}/>
-                                <p style={{marginLeft:'0.3rem'}}>My Github</p>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                </div>
-                }
-                <div className={styles.rightContainer}>
-                   {selectedProjectId ? 
-                    projectInfo
-                   : 
-                    <div className={styles.projectsGrid}>
-                        {gridItems}
-                    </div>
-                    }
-                </div>
+            <div className={styles.contactContentContainer} style={screenWidthEdit}>
+                 <textarea 
+                        className={styles.messageBox}
+                        placeholder="Message here..."
+                    />
             </div>
 
             <div

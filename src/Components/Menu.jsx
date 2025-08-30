@@ -15,6 +15,27 @@ export default function Menu({ onLogout, openWindow  }) {
         if (key === "Projects") {
         openWindow("projects");
         }
+        else if(key === 'My Pictures') {
+        openWindow("pictures");
+        }
+        else if(key === 'CV') {
+        openWindow("CV");
+        }
+        else if(key === 'Diet Planning') {
+        openWindow("Diet_Planning");
+        }
+        else if(key === 'Notepad') {
+        openWindow("Notepad");
+        }
+        else if(key === 'Terminal') {
+        openWindow("Terminal");
+        }
+        else if(key === 'Blog Posts'){
+            openWindow("Blog_Posts");
+        }
+        else if(key === 'Contact'){
+            openWindow("Contact");
+        }
     };
 
     const menuItems = useMemo(() => {
@@ -31,7 +52,7 @@ export default function Menu({ onLogout, openWindow  }) {
 
     const right_menuItems = useMemo(() => {
     return Object.entries(right_content).map(([key, value]) => (
-        <button key={key} className={styles.rightMenusection}>
+        <button key={key} className={styles.rightMenusection} onClick={()=>{handleClick(key)}}>
             <div><img src={`/${value}`} alt={key} className={styles.leftMenuIcons}/></div>
             <div><p className={styles.rightMenuEntry}>{key}</p></div>
         </button>
@@ -58,7 +79,15 @@ export default function Menu({ onLogout, openWindow  }) {
                 <img src="/logoff.png" alt="Log Off" className={styles.logOffIcon}/>
                 <p className={styles.logOffText}>Log Off</p>
             </div>
-            <div className={styles.shutdownContainer} onClick={() => navigate("/", {replace:true})}>
+            <div className={styles.shutdownContainer} 
+                onClick={() => {
+                    const shutdownSound = new Audio("/Windows XP Shutdown.wav");
+                    shutdownSound.play();
+                     setTimeout(() => {
+                        navigate("/", { replace: true });
+                    }, 200); 
+                    shutdownSound.onerror = () => navigate("/", { replace: true });
+                }}>
                 <img src="/shutdown.png" alt="Turn Off Computer" className={styles.shutdownIcon}/>
                 <p className={styles.shutdownText}>Turn Off Computer</p>
             </div>
