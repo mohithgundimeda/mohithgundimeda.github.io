@@ -36,6 +36,12 @@ export default function Menu({ onLogout, openWindow  }) {
         else if(key === 'Contact'){
             openWindow("Contact");
         }
+        else if (key === 'Github'){
+        window.open("https://github.com/mohithgundimeda?tab=repositories", "_blank", "noopener,noreferrer");
+        }
+        else if (key === 'Medium'){
+            window.open("https://mohith-g.medium.com", "_blank", "noopener,noreferrer");
+        }
     };
 
     const menuItems = useMemo(() => {
