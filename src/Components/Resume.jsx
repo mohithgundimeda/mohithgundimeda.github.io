@@ -111,12 +111,12 @@ const Resume = () => {
           Classes
         </h3>
         <p style={{ margin: 0 }}>
-          Courses: Algorithm Design, Linear Algebra, Probability and Statistics, Advanced Machine Learning, Deep Learning, Natural Language Processing, DBMS, Cloud Computing, Reinforcement Learning (In Progress), Recommender Systems (In Progress)
+          Courses: Algorithm Design, Linear Algebra, Probability and Statistics, Advanced Machine Learning, Deep Learning, Natural Language Processing, DBMS, Cloud Computing, Reinforcement Learning, Recommender Systems
         </p>
       </div>
 
       <p style={{ margin: 0 }}>
-        +91 9121681169 | mohithgundemeda@gmail.com | github.com/mohithgundimeda
+        mohithgundemeda@gmail.com | github.com/mohithgundimeda
       </p>
     </div>
   );
