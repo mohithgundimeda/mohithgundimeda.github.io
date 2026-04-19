@@ -12,14 +12,6 @@ export default function ProjectTemplate({projects, id}){
         )
     }
 
-    const objList = project.objective.map((item, index)=>(
-        <li key={index} className={styles.objectiveItem}>{item}</li>
-    ))
-    
-    const takeAwayList = project.takeAway.map((item, index)=>(
-        <li key={index} className={styles.takeAwayItem}>{item}</li>
-))
-
     return(
         <div className={styles.templateContainer}>
 
@@ -33,22 +25,8 @@ export default function ProjectTemplate({projects, id}){
             </div>
 
             <div className={styles.contextContainer}>
-                <p className={styles.contextTitle} >Context :</p>
-                <p className={styles.contextItems}>{project.context}</p>
-            </div>
-
-            <div className={styles.objectiveContainer}>
-                <p className={styles.objectiveTitle} >Objectives :</p>
-                <div className={styles.objUl}>
-                    {objList}
-                </div>
-            </div>
-
-            <div className={styles.takeAwayContainer}>
-                <p className={styles.takeAwayTitle}>Take Aways :</p>
-                <div className={styles.takeAwadiv}>
-                    {takeAwayList}
-                </div>
+                <p className={styles.contextTitle} >Discription :</p>
+                <p className={styles.contextItems}>{project.Description}</p>
             </div>
             
             <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.pathway}>

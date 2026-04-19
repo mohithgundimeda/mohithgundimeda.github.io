@@ -328,6 +328,21 @@ export default function DietPlanning({ closeWindow, minimizeWindow, zIndex, onFo
             <li className={styles.point}>I should do maintenance after an entire bulk session, going to cut is not a good idea.</li>
             <li className={styles.point}>Initial diet plan, will be tweaking every 2 weeks until desired results,</li>
             <img style={{width: graphsSize, height: graphsSize, objectFit:'contain'}} src="/daily_shedule.png" alt="day plan"/>
+            <li className={styles.point}>Maintenance calories are not fixed; they change as body weight, activity, and muscle mass change. I should find maintenance through observation, not just calculators.</li>
+            <li className={styles.point}>The body responds to weekly average calorie intake, not single day perfection. Consistency over time matters more than individual meals.</li>
+            <li className={styles.point}>Weight fluctuations day-to-day are mostly due to water, glycogen, and digestion, not actual fat or muscle changes.</li>
+            <li className={styles.point}>Progress should be measured using trends (weekly or bi-weekly averages), not single weigh-ins.</li>
+            <li className={styles.point}>Muscle growth does not happen linearly every week; it happens in phases with periods of faster gain and stabilization.</li>
+            <li className={styles.point}>Once protein requirement is met, adding more protein has diminishing returns; extra calories are better allocated to carbs for performance.</li>
+            <li className={styles.point}>Carbohydrates play a major role in training performance by maintaining glycogen stores, which directly affect strength and volume capacity.</li>
+            <li className={styles.point}>Higher carb intake supports higher training volume and better recovery, especially in hypertrophy-focused training.</li>
+            <li className={styles.point}>Fat intake should be sufficient for hormonal health, but excessive fat reduces room for carbs, which can impact training performance.</li>
+            <li className={styles.point}>The body adapts to calorie intake over time; what was once a surplus can become maintenance as body weight increases.</li>
+            <li className={styles.point}>A successful bulk is determined by rate of weight gain, not just calorie intake. The scale trend is the feedback system.</li>
+            <li className={styles.point}>Optimal weight gain for muscle growth is around 0.25% to 0.75% of body weight per week, depending on aggressiveness.</li>
+            <li className={styles.point}>Gaining weight too fast increases fat accumulation without increasing muscle growth rate significantly.</li>
+            <li className={styles.point}>Recovery capacity is limited; prioritizing certain muscle groups means reducing unnecessary volume elsewhere.</li>
+            <li className={styles.point}>It's okay to miss a meal, long-term consistency and trend alignment are what drive results.</li>
         </div>
       </div>
 

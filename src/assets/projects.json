@@ -2,13 +2,40 @@
     "projects": [
         {
         "id": 1,
-        "title": "project 1",
-        "Stack": "React, js , css",
-        "context": "A personal portfolio website to showcase my projects and skills.",
-        "objective": ["Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio.","Create a responsive and visually appealing portfolio."],
-        "takeAway":["Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience.","Learned about responsive design and user experience."],
-        "link": "https://myportfolio.com"
+        "title": "Dynamodelx",
+        "Description": "Dynamodelx is a Python library for creating dynamic machine learning models. It is built on top of Pytorch and provides a simple, quick API's to create and train dynamic models. For more information, visit the GitHub repository.",
+        "Stack": "Pytorch",
+        "link": "https://github.com/mohithgundimeda/dynamodelx"
+        },
+        {
+        "id": 2,
+        "title": "Drafting Agent",
+        "Description": "Drafting Agent is a Streamlit app that uses Hugging Face Transformers to generate drafts for various drafting tasks between government entities. For more information, visit the Github public repository.",
+        "Stack": "Hugging Face Transformers, Streamlit",
+        "link": "https://github.com/mohithgundimeda/Training-Draft-Public"
+        },
+        {
+        "id": 3,
+        "title": "Baseline OS",
+        "Description": "Baseline OS is a Linux distribution built and designed to provide a minimalistic environment to train machine learning models. It is build by customizing arch linux baseline profile. It is designed to be lightweight and fast, with a focus on utilizing the most out of the hardware resources by removing unnecessary packages and services. More Information about the project can be found on the Google Drive folder.",
+        "Stack": "archiso",
+        "link": "https://drive.google.com/drive/folders/11EmJHU7dK4pbLoHP4-4pfwwWWW638C9d?usp=sharing"
+        },
+        {
+        "id": 4,
+        "title": "Shivira Travels",
+        "Description": "Shivira Travels is a 15-year-old holiday packages booking company based in Hydrabad, Guntur, Vijayawada. From when it was established, it grew it's customer base based on word of mouth and referrals and broadcasted ads on TV and newspapers. I felt they can do better by going digital, so I offered to take Shivira Travels online by creating a website, official emails to expand their reach and make it easier for customers to book packages online. Now it has a user-friendly website that showcases their holiday packages, allows customers to easily browse and contact them.",
+        "Stack": "AWS, ReactJS, ExpressJS, SQL, GSAP",
+        "link": "https://shiviratravels.com"
+        },
+        {
+        "id": 5,
+        "title": "Calorie Vision",
+        "Description": "Calorie Vision is a web app that uses computer vision to identify food items and estimate their calorie content and nutritional value. For the time being, it's a simple prototype that demonstrates the concept.So, it was only trained on food images containing 5 classes(Bread, Egg, Meat, Noodles, Rice). Currently it's been removed from online platforms. But the code is available in GitHub repository.",
+        "Stack": "TensorFlow, SQLAlchemy, MATPLOTLIB",
+        "link": "https://github.com/mohithgundimeda/CalorieVision"
         }
+
     ],
 
     "blogs":[
@@ -75,6 +102,30 @@
             "tags":["Kernel Density Estimation", "Smoothing", "Bandwidth", "Gaussian Kernel", "Epanechnikov Kernel"],
             "abstract":"Introduces kernel density estimation as a smoother alternative to histograms. Explains how kernels work, why bandwidth controls the balance between noise and oversmoothing, and shows common choices like Gaussian, Epanechnikov, and Uniform kernels. Walks through coding KDE by hand, then compares it to built-in implementations from Statsmodels and Seaborn on the Old Faithful dataset.",
             "link":"https://medium.com/@mohith-g/moving-past-histograms-smoothing-out-distributions-with-kde-9c5a7700f667"
+        },
+        {
+            "id":9,
+            "title":"A Comprehensive Guide On Classification",
+            "image":"/blogs/classification.webp",
+            "tags":["Bayesian Classifier", "Quadratic Discriminant Analysis", "Linear Discriminant Analysis", "Naive Bayes", "Logistic Regression", "Decision Trees", "Support Vector Machines"],
+            "abstract":"Provides a comprehensive overview of classification algorithms, starting with the Bayesian classifier and its assumptions. Explains how Quadratic Discriminant Analysis (QDA) and Linear Discriminant Analysis (LDA) work, their differences, and when to use each. Covers Naive Bayes, Logistic Regression, Decision Trees, and Support Vector Machines (SVMs), highlighting their strengths, weaknesses.",
+            "link":"https://mohith-g.medium.com/a-comprehensive-guide-on-classification-c27f90558afa"
+        },        
+    {
+            "id":10,
+            "title":"Bayesian Neural Networks",
+            "image":"/blogs/BNN.jpg",
+            "tags":["Bayesian Neural Networks", "Uncertainty Estimation", "Variational Inference", "Monte Carlo Dropout", "Bayes by Backprop"],
+            "abstract":"How can we get epistemic and aleatoric uncertainties just by converting from point-estimates to random-variables ?",
+            "link":"https://mohith-g.medium.com/bayesian-neural-networks-203e2e4d56f0"
+        },        
+        {
+            "id":11,
+            "title":"Stuff I Learned While Building Models — The Notes I Wish I Had Earlier",
+            "image":"/blogs/patternreco.jpg",
+            "tags":["GPU Utilization", "Clamping Gradients", "BatchNorm", "Efficient Modeling", "Mixed Precision Training"],
+            "abstract":"A collection of practical tips and insights I wish I had when I started building machine learning models. Covers topics like maximizing GPU utilization, clamping gradients to prevent exploding, using BatchNorm for faster convergence, efficient modeling techniques, and the benefits of mixed precision training.",
+            "link":"https://mohith-g.medium.com/stuff-i-learned-while-building-models-the-notes-i-wish-i-had-earlier-982156d69168"
         }
     ]
 }
