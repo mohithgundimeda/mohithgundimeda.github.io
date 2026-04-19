@@ -194,7 +194,7 @@ export default function Cv({ closeWindow, minimizeWindow, zIndex, onFocus, minim
       <div className={styles.projectsHeader} onMouseDown={startMove}>
         <div className={styles.frameIdentity}>
           <img src="/Address Book.png" alt="CV" className={styles.frameIcon} />
-          <p className={styles.frameText}>CV</p>
+          <p className={styles.frameText}>Resume</p>
         </div>
         <div className={styles.frameOptions}>
           <img src="/Minimize.png" alt="minimize" className={styles.option} onClick={minimizeWindow} />
@@ -267,7 +267,7 @@ export default function Cv({ closeWindow, minimizeWindow, zIndex, onFocus, minim
         <div className={styles.typeArea}>
           <div className={styles.typeAreaLeft}>
             <img src="/Detail View.png" alt="detail view" className={styles.smallericon} />
-            <p>CV</p>
+            <p>Resume</p>
           </div>
           <div className={styles.typeAreaRight}>
             <img src="/down.png" alt="down" className={styles.smallericon} />

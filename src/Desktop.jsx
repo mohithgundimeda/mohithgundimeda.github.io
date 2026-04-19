@@ -234,8 +234,8 @@ const focusWindow = (key) => {
       <div className={styles.shortcuts}>
 
       <div onDoubleClick={()=>openWindow('CV')}>
-        <img src='/Address Book.png' alt="cv"/>
-        <p>CV</p>
+        <img src='/Address Book.png' alt="resume"/>
+        <p>Resume</p>
       </div>
 
       <div onDoubleClick={()=>openWindow('projects')}>

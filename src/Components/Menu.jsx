@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Menu({ onLogout, openWindow  }) {
     const navigate = useNavigate();
 
-    const content = {'CV':['Address Book.png', ' View my CV and background'], 'Projects':['Briefcase.png', ' Explore my completed works'], 'Blog Posts':['Generic Text Document.png', 'Read my technical writings'], 'Diet Planning':['Graph View.png', 'Diet tracking'], 'Contact':['Email.png', 'My contact info'], 'Terminal':['Command Prompt.png', 'Run commands using terminal']};
+    const content = {'Resume':['Address Book.png', ' View my resume and background'], 'Projects':['Briefcase.png', ' Explore my completed works'], 'Blog Posts':['Generic Text Document.png', 'Read my technical writings'], 'Diet Planning':['Graph View.png', 'Diet tracking'], 'Contact':['Email.png', 'My contact info'], 'Terminal':['Command Prompt.png', 'Run commands using terminal']};
 
     const right_content = {'Notepad':'Notepad.png', 'My Pictures':'My Pictures.png', 'Github':'github-mark-white.png', 'Medium':'Medium-Icon-Black.png'};
 
@@ -18,7 +18,7 @@ export default function Menu({ onLogout, openWindow  }) {
         else if(key === 'My Pictures') {
         openWindow("pictures");
         }
-        else if(key === 'CV') {
+        else if(key === 'Resume') {
         openWindow("CV");
         }
         else if(key === 'Diet Planning') {
