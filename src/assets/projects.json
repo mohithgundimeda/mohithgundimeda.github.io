@@ -23,26 +23,25 @@
         },
         {
         "id": 4,
+        "title": "Make Sense",
+        "Description": "Make Sense is a pipeline that converts research paper PDFs into structured, beginner-friendly explainer PDFs. It extracts a paper's text, tables, formulas, and figures, rewrites the content into a clearer explanation using an LLM, and renders the result back into a formatted PDF. For more information, visit the GitHub repository.",
+        "Stack": "Marker, Pandoc, Tectonic, Gemini API, OpenRouter",
+        "link": "https://github.com/mohithgundimeda/Make-Sense"
+        },
+        {
+        "id": 5,
         "title": "Shivira Travels",
         "Description": "Shivira Travels is a 15-year-old holiday packages booking company based in Hydrabad, Guntur, Vijayawada. From when it was established, it grew it's customer base based on word of mouth and referrals and broadcasted ads on TV and newspapers. I felt they can do better by going digital, so I offered to take Shivira Travels online by creating a website, official emails to expand their reach and make it easier for customers to book packages online. Now it has a user-friendly website that showcases their holiday packages, allows customers to easily browse and contact them.",
         "Stack": "AWS, ReactJS, ExpressJS, SQL, GSAP",
         "link": "https://shiviratravels.com"
         },
         {
-        "id": 5,
+        "id": 6,
         "title": "Calorie Vision",
         "Description": "Calorie Vision is a web app that uses computer vision to identify food items and estimate their calorie content and nutritional value. For the time being, it's a simple prototype that demonstrates the concept.So, it was only trained on food images containing 5 classes(Bread, Egg, Meat, Noodles, Rice). Currently it's been removed from online platforms. But the code is available in GitHub repository.",
         "Stack": "TensorFlow, SQLAlchemy, MATPLOTLIB",
         "link": "https://github.com/mohithgundimeda/CalorieVision"
-        },
-        {
-        "id": 6,
-        "title": "Make Sense",
-        "Description": "Make Sense is a pipeline that converts research paper PDFs into structured, beginner-friendly explainer PDFs. It extracts a paper's text, tables, formulas, and figures, rewrites the content into a clearer explanation using an LLM, and renders the result back into a formatted PDF. For more information, visit the GitHub repository.",
-        "Stack": "Marker, Pandoc, Tectonic, Gemini API, OpenRouter",
-        "link": "https://github.com/mohithgundimeda/Make-Sense"
         }
-
     ],
 
     "blogs":[

@@ -256,7 +256,7 @@ export default function Contact({closeWindow, minimizeWindow,zIndex, onFocus, mi
                 <div className={styles.inputCell}>
                     <input 
                     type="text"
-                    value="mohithgundemeda@gmail.com"
+                    value="mohith.work@outlook.com"
                     style={{pointerEvents:'none'}}
                     />
                 </div>
